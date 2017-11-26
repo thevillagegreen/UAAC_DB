@@ -1,0 +1,31 @@
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Employee Table</div>
+
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Last</th>
+    <th>First</th>
+    <th>Middle</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>SSN</th>
+    <th>Org ID</th>
+
+    {{#each employees}}
+    <tr>
+      <td>{{Employee_ID}}</td>
+      <td>{{Lname}}</td>
+      <td>{{Fname}}</td>
+      <td>{{Mname}}</td>
+      <td>{{Address}}</td>
+      <td>{{Phone_Number}}</td>
+      <td>{{SSN}}</td>
+      <td>{{Org_ID}}</td>
+
+    </tr>
+    {{/each}}
+  </table>
+</div>
