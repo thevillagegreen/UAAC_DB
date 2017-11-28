@@ -1,7 +1,8 @@
-var express = require('express');
-var router = express.Router();
 
+var express = require('express');
 const knex = require('../db/knex');
+
+var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,6 +16,26 @@ router.get('/animal', function(req, res) {
       res.render('./tables/animal', {animals: animals});
     })
 });
+
+router.get('/animal/new', function(req, res) {
+  res.render('./animal/insert');
+});
+
+router.post('/animal/new', function(req, res) {
+  console.log(req.body);
+  knex('ANIMAL').insert(
+    {
+      Animal_ID: req.body.id,
+      Animal_Name: req.body.name,
+      Breed: req.body.breed
+    }).then(a => {
+      console.log('post sent');
+      console.log(a);
+      res.redirect('/tables/animal');
+    })
+
+});
+
 
 router.get('/employee', function(req, res) {
   knex('EMPLOYEE')

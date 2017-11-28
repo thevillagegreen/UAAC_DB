@@ -1,0 +1,10 @@
+change files in views for seperation of concern
+  - /employees - list
+    /employees/:id - single employee
+    /employees/new - create
+  - update routes
+
+Cats or dogs filtering
+ - change title
+
+Search for breed

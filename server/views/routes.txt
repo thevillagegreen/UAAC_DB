@@ -1,0 +1,7 @@
+/ - home
+
+seperation of concerns
+
+/employees - list
+/employees/:id - single employee
+/employees/new - create
