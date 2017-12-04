@@ -146,7 +146,6 @@ CREATE TABLE ANIMAL_HEALTH (
 	FOREIGN KEY (Vaccine_ID) REFERENCES VACCINE(Vaccine_ID)
 );
 
-
 /*
 ALTER TABLE EMPLOYEE ADD Org_ID VARCHAR(100) NOT NULL;
 ALTER TABLE EMPLOYEE ADD FOREIGN KEY (Org_ID) REFERENCES ORGANIZATION (Org_ID);
@@ -216,3 +215,11 @@ update ANIMAL set Date_In = '2017-12-05' where Animal_ID = '4';
 update ANIMAL set Date_In = '2017-10-31' where Animal_ID = '5';
 update ANIMAL set Date_In = '2017-08-21' where Animal_ID = '6';
 update ANIMAL set Date_In = '2017-11-04' where Animal_ID = '7';
+
+insert into ANIMAL_HEALTH values('3', '3', '1', 'No');
+insert into ANIMAL_HEALTH values('4', '4', '2', 'Yes');
+insert into ANIMAL_HEALTH values('11', '11', '3', 'Yes');
+insert into ANIMAL_HEALTH values('12', '12', '3', 'Yes');
+
+insert into DONOR values('2', 'Chag', 'Mark', 'mchag@email.com');
+insert into DONOR_TO_ORG values('2', '1', '6900');
