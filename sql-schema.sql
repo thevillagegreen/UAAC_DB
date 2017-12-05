@@ -180,7 +180,6 @@ INSERT INTO DISH VALUES ('1', '5');
 INSERT INTO KENNEL_AREA VALUES ('1', '1', '49');
 INSERT INTO ANIMAL_HEALTH VALUES ('1', '1', '1', 'Yes');
 
-
 INSERT INTO ANIMAL VALUES ('190248', 'Link', 'Border_Collie', '3', 'Black', 'No', 'Drawer', 'No', 'Dog', '1');
 INSERT INTO EMPLOYEE VALUES ('1750', 'Sparks', 'Zoey', 'Kristine', '16 Hawk Ln', '(987)654-321', '12345678', '1');
 INSERT INTO VOLUNTEER VALUES ('24869', 'Johnson', 'Mary', '(479)616-9789', '1840 S 1300 E', 'Johnson', 'Luke', '(479)981-7697', '1');
@@ -209,17 +208,29 @@ insert into ANIMAL values('9', 'Mackey', 'Daschund', '1', 'Brown', 'Yes', 'Box',
 insert into ANIMAL values('10', 'Dingus', 'Lab', '2', 'Black', 'No', 'Drawer', 'No', 'Dog', '1', '2017-12-04');
 insert into ANIMAL values('11', 'Graham', 'Golden Rottweiler', '6', 'Red', 'No', 'Box', 'Yes', 'Dog', '1', '1995-06-16');
 insert into ANIMAL values('12', 'Ross', 'American Shorthais', '13', 'Brown/black', 'Yes', 'Drawer', 'Yes', 'Cat', '1', '1995-10-12');
-update ANIMAL set Date_In = '2017-12-04' where Animal_ID = '2';
-update ANIMAL set Date_In = '2017-11-30' where Animal_ID = '3';
-update ANIMAL set Date_In = '2017-12-05' where Animal_ID = '4';
-update ANIMAL set Date_In = '2017-10-31' where Animal_ID = '5';
-update ANIMAL set Date_In = '2017-08-21' where Animal_ID = '6';
-update ANIMAL set Date_In = '2017-11-04' where Animal_ID = '7';
+insert into ANIMAL values('13', 'Jack', 'Egyptian', '15', 'White', 'Yes', 'Box', 'No', 'Cat', '1', '2017-12-06');
+insert into ANIMAL values('14', 'Brandon', 'Pitbull', '13', 'Golden', 'Yes', 'Drawer', 'Yes', 'Dog', '1', '2017-06-06 12:00:00');
+
+update ANIMAL set Date_In = '2017-12-04 12:00:00' where Animal_ID = '2';
+update ANIMAL set Date_In = '2017-11-30 14:00:00' where Animal_ID = '3';
+update ANIMAL set Date_In = '2017-12-05 19:21:21' where Animal_ID = '4';
+update ANIMAL set Date_In = '2017-10-31 05:55:20' where Animal_ID = '5';
+update ANIMAL set Date_In = '2017-08-21 01:07:09' where Animal_ID = '6';
+update ANIMAL set Date_In = '2017-11-04 10:26:39' where Animal_ID = '7';
+update ANIMAL set Date_In = '2017-12-03 19:56:08' where Animal_ID = '8';
+
+insert into VACCINE (Vaccine_ID, Vaccine_Name) values ('5', 'Generic_Shot');
 
 insert into ANIMAL_HEALTH values('3', '3', '1', 'No');
 insert into ANIMAL_HEALTH values('4', '4', '2', 'Yes');
+insert into ANIMAL_HEALTH values('5', '5', '2', 'Yes');
+insert into ANIMAL_HEALTH values('6', '6', '3', 'No');
+insert into ANIMAL_HEALTH values('8', '8', '3', 'Yes');
+insert into ANIMAL_HEALTH values('9', '9', '5', 'No');
 insert into ANIMAL_HEALTH values('11', '11', '3', 'Yes');
 insert into ANIMAL_HEALTH values('12', '12', '3', 'Yes');
 
 insert into DONOR values('2', 'Chag', 'Mark', 'mchag@email.com');
 insert into DONOR_TO_ORG values('2', '1', '6900');
+insert into DONOR values('3', 'Stiltskin', 'Rumple', 'rumpstilt@email.com');
+insert into DONOR_TO_ORG values('3', '1', '4200');
