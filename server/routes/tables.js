@@ -24,6 +24,8 @@ router.get('/animal', function(req, res) {
     })
 });
 
+//INSERT
+
 router.get('/animal/new', function(req, res) {
   res.render('./animal/form');
 });
@@ -51,6 +53,8 @@ router.post('/animal/new', function(req, res) {
     })
 });
 
+//DELETE
+
 router.get('/animal/delete', function(req, res) {
   res.render('./animal/delete');
 });
@@ -58,6 +62,7 @@ router.get('/animal/delete', function(req, res) {
 router.post('/animal/delete', function(req, res) {
   console.log(req.body);
   knex('ANIMAL')
+    .select()
     .where('Animal_ID', req.body.id)
     .del().then(a => {
       console.log('post sent');
@@ -65,6 +70,27 @@ router.post('/animal/delete', function(req, res) {
       res.redirect('/tables/animal');
     })
 });
+
+//SEARCH
+
+router.get('/animal/search', function(req, res) {
+  res.render('./animal/search');
+});
+
+
+router.post('/animal/search', function(req, res) {
+  console.log(req.body);
+  knex('ANIMAL')
+    .where('Animal_ID', req.body.id)
+  .then(a => {
+    console.log('post sent');
+    console.log(a);
+    res.redirect('/tables/animal/result', {bree});
+    })
+});
+
+
+
 
 router.get('/employee', function(req, res) {
   knex('EMPLOYEE')
@@ -79,6 +105,14 @@ router.get('/volunteer', function(req, res) {
     .select()
     .then(volunteers => {
       res.render('./tables/volunteer', {volunteers: volunteers});
+    })
+});
+
+router.get('/animal_health', function(req, res) {
+  knex('VOLUNTEER')
+    .select()
+    .then(animals => {
+      res.render('./tables/animal_health', {animals: animals});
     })
 });
 

@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Available Pets</div>
+
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+
+    {{#each adopt}}
+    <tr>
+      <td>{{Animal_Name}}</td>
+      <td>{{Breed}}</td>
+      <td>{{Age}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
