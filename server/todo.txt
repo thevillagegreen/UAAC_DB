@@ -8,3 +8,7 @@ Cats or dogs filtering
  - change title
 
 Search for breed
+
+
+WHAT TO IMPROVE
+ - all fields should be lower case, data should be lower case(unless proper noun)

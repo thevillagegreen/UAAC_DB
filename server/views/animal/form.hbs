@@ -1,0 +1,65 @@
+
+
+<form action="/tables/animal/new" method="POST">
+  <div class="form-group">
+
+    <label for="animal_id">ID</label>
+    <input type="text" name="id" class="form-control" id="animal_id" placeholder="E.G. 1232">
+
+    <label for="animal_name">Name</label>
+    <input type="text" name="name" class="form-control" id="animal_name" placeholder="E.G. Spot">
+
+    <label for="animal_breed">Breed</label>
+    <input type="text" name="breed" class="form-control" id="animal_breed" placeholder="E.G. Lab">
+
+    <label for="animal_age">Age</label>
+    <input type="text" name="age" class="form-control" id="animal_age" placeholder="E.G. 2">
+
+    <label for="animal_fur">Fur Color</label>
+    <input type="text" name="fur" class="form-control" id="animal_fur" placeholder="E.G. Brown">
+
+    <div class="form-check form-check-inline">
+      <label for="animal_fur">Adopted?</label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="adopted" id="animal_adopted" value="Yes"> Yes
+      </label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="adopted" id="animal_adopted" value="No"> No
+      </label>
+    </div>
+
+    <label for="animal_folder">Animal Folder</label>
+    <input type="text" name="folder" class="form-control" id="animal_folder" placeholder="E.G. Box">
+
+    <div class="form-check form-check-inline">
+      <label for="animal_fostered">Fostered?</label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="fostered" id="animal_fostered" value="Yes"> Yes
+      </label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="fostered" id="animal_fostered" value="No"> No
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <label for="animal_type">Animal Type</label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="type" id="animal_type" value="Dog"> Dog
+      </label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="type" id="animal_type" value="Cat"> Cat
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <label for="animal_org">Organization ID</label>
+      <label class="form-check-label" for="animal_adopted">
+        <input class="form-check-input" type="radio" name="org" id="animal_org" value="1"> 1
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </div>
+
+</form>

@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Animal Walk Table <a href="./animal_walk/new" class="right">ADD ANIMAL_WALK</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Volunteer ID</th>
+    <th>Animal ID</th>
+    <th>Time Left</th>
+    <th>Time Returned</th>
+   
+    {{#each animal_walks}}
+    <tr>
+      <td>{{Volunteer_ID}}</td>
+      <td>{{Animal_ID}}</td>
+      <td>{{Time_Left}}</td>
+      <td>{{Time_Returned}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Employee Laundry Table <a href=“./employee_laundry/new" class="right">ADD EMPLOYEE_LAUNDRY</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Employee ID</th>
+    <th>Station Number</th>
+
+
+    {{#each animals}}
+    <tr>
+      <td>{{Employee_ID}}</td>
+      <td>{{Station_Number}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>

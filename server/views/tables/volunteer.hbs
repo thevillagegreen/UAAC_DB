@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Volunteer Table <a href=“./volunteer/new" class="right">ADD VOLUNTEER</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>Emergency Contact Last Name</th>
+    <th> Emergency Contact First Name</th>
+    <th>Emergency Contact Phone Number</th>
+    <th>Org ID</th>
+
+    {{#each volunteers}}
+    <tr>
+      <td>{{Volunteer_ID}}</td>
+      <td>{{LName}}</td>
+      <td>{{FName}}</td>
+      <td>{{Phone_Number}}</td>
+      <td>{{Address}}</td>
+      <td>{{Emergency_Contact_LName}}</td>
+      <td>{{Emergency_Contact_FName}}</td>
+      <td>{{Emergency_Contact_PNumber}}</td>
+      <td>{{Org_ID}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

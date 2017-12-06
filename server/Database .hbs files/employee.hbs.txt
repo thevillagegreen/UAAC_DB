@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Employee Table <a href=“./employee/new" class="right">ADD EMPLOYEE</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>SSN</th>
+    <th>Org ID</th>
+   
+
+    {{#each employees}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Lname}}</td>
+      <td>{{Fname}}</td>
+      <td>{{Mname}}</td>
+      <td>{{Address}}</td>
+      <td>{{Phone_Number}}</td>
+      <td>{{SSN}}</td>
+     <td>{{Org_ID}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

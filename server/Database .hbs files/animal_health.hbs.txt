@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Animal Health Table <a href=“./animal_health/new" class="right">ADD ANIMAL_HEALTH</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Animal ID</th>
+    <th>Health Record Number</th>
+    <th>Vaccine ID</th>
+    <th>Spayed or Neutered</th>
+    
+
+    {{#each animal_healths}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Health_Record_Number}}</td>
+      <td>{{Vaccine_ID}}</td>
+      <td>{{Spayed_or_Neutered}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>

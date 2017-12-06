@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Yard Table <a href=“./yard/new" class="right">ADD YARD</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Yard Number</th>
+    <th>Yard Size</th>
+    <th>Employee ID</th>
+
+
+    {{#each animals}}
+    <tr>
+      <td>{{Yard_Number}}</td>
+      <td>{{Yard_Size}}</td>
+      <td>{{Employee_ID}}</td>
+
+    </tr>
+    {{/each}}
+  </table>
+</div>

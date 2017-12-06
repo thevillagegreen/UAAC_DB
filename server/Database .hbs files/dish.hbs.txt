@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Dish Table <a href=“./dish/new" class="right">ADD DISH</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Animal ID</th>
+    <th>Dish Number</th>
+   
+
+    {{#each dishes}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Dish_Number}}</td>
+      
+    </tr>
+    {{/each}}
+  </table>
+</div>

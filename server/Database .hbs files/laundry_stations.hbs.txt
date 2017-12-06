@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Laundry Station Table <a href=“./laundry_station/new" class="right">ADD LAUNDRY_STATION</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Station Number</th>
+    <th>Volunteer ID</th>
+    <th>Buckets</th>
+
+    {{#each laundry_stations}}
+    <tr>
+      <td>{{Station_Number}}</td>
+      <td>{{Volunteer_ID}}</td>
+      <td>{{Buckets}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>
