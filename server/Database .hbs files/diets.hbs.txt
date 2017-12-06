@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">DIETS Table <a href=“./diets/new" class="right">ADD DIET</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Animal ID</th>
+    <th>Food Type</th>
+
+    {{#each diets}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Food_Type}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>

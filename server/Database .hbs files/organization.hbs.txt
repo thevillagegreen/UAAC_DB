@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Organization Table <a href=“./organization/new" class="right">ADD ORGANIZATION</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Organization ID</th>
+    <th> Name</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+  
+
+    {{#each organizations}}
+    <tr>
+      <td>{{Org_ID}}</td>
+      <td>{{Org_Name}}</td>
+      <td>{{Org_Pnumber}}</td>
+      <td>{{Org_Address}}</td>
+  
+    </tr>
+    {{/each}}
+  </table>
+</div>

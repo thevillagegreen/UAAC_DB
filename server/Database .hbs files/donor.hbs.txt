@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Donor Table <a href=“./donor/new" class="right">ADD DONOR</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Donor ID</th>
+    <th>Donor Last Name</th>
+    <th>Donor First Name</th>
+    <th>Donor Email</th>
+ 
+    {{#each donors}}
+    <tr>
+      <td>{{Donor_ID}}</td>
+      <td>{{Donor_Lname}}</td>
+      <td>{{Donor_Fname}}</td>
+      <td>{{Donor_Email}}</td>
+   </tr>
+    {{/each}}
+  </table>
+</div>

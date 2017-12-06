@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Vaccine Table <a href=“./vaccine/new" class="right">ADD VACCINE</a></div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>Vaccine ID</th>
+    <th>Name</th>
+    <th>Date Received</th>
+    <th>Update Shot Date</th>
+
+    {{#each vaccines}}
+    <tr>
+      <td>{{Vaccine_ID}}</td>
+      <td>{{Vaccine_Name}}</td>
+      <td>{{Breed}}</td>
+      <td>{{Date_Received}}</td>
+      <td>{{Update_Shot_Date}}</td>
+    
+    </tr>
+    {{/each}}
+  </table>
+</div>
