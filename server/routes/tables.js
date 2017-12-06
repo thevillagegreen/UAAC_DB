@@ -1,12 +1,19 @@
 
 var express = require('express');
 const knex = require('../db/knex');
-
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('tables', { title: 'Express' });
+  res.render('tables', { title: 'UAAC' });
+});
+
+router.get('/newest', function(req, res) {
+  knex('NEWEST_ANIMAL').orderBy('Date_In', 'DESC')
+    .select()
+    .then(newest => {
+      res.render('./tables/newest', {newest: newest});
+    })
 });
 
 router.get('/animal', function(req, res) {
