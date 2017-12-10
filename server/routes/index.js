@@ -10,4 +10,8 @@ router.get('/donate', function(req, res, next) {
   res.render('donate', { title: 'UAAC' });
 });
 
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'UAAC' });
+});
+
 module.exports = router;
