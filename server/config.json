@@ -1,0 +1,9 @@
+{
+  "GCLOUD_PROJECT": "dulcet-equinox-184822",
+  "DATA_BACKEND": "cloudsql",
+  "MYSQL_USER": "root",
+  "MYSQL_PASSWORD": "abc123",
+  "INSTANCE_CONNECTION_NAME": "dulcet-equinox-184822:us-central1:uaac-database"
+
+}
+

@@ -1,0 +1,39 @@
+<div class="container">
+  <form action="/tables/volunteer/new" method="POST">
+    <div class="form-group">
+
+      <label for="volunteer_id">ID</label>
+      <input type="text" name="id" class="form-control" id="volunteer_id" placeholder="E.G. 1232">
+
+      <label for="volunteer_lname">Last Name</label>
+      <input type="text" name="lname" class="form-control" id="volunteer_LName" placeholder="E.G. Smith">
+
+      <label for="volunteer_fname">First Name</label>
+      <input type="text" name="fname" class="form-control" id="volunteer_FName" placeholder="E.G. Dan">
+
+      <label for="volunteer_number">Phone Number</label>
+      <input type="text" name="number" class="form-control" id="volunteer_number" placeholder="E.G. 803-123-4567">
+
+      <label for="volunteer_address">Address</label>
+      <input type="text" name="address" class="form-control" id="volunteer_address" placeholder="E.G. 1000 S 1000 E, Salt Lake City, UT">
+
+      <label for="volunteer_emergency_contact_lname">Emergency Contact Last Name</label>
+      <input type="text" name="lname" class="form-control" id="volunteer_emergency_contact_LName" placeholder="E.G. Smith">
+
+      <label for="volunteer_emergency_contact_fname">Emergency Contact First Name</label>
+      <input type="text" name="fname" class="form-control" id="volunteer_emergency_contact_FName" placeholder="E.G. Daniel">
+
+      <label for="volunteer_emergency_contact_number">Emergency Contact Phone Number</label>
+      <input type="text" name="contact_number" class="form-control" id="volunteer_emergency_contact_number" placeholder="E.G. 809-123-4567">
+
+      <div class="form-check form-check-inline">
+        <label for="volunteer_org">Organization ID</label>
+        <label class="form-check-label" for="volunteer_adopted">
+          <input class="form-check-input" type="radio" name="org" id="volunteer_org" value="1"> 1
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

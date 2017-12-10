@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Newest Animal Table</div>
+
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Name</th>
+    <th>First</th>
+    <th>Type</th>
+
+    {{#each newest}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Animal_Name}}</td>
+      <td>{{Animal_Type}}</td>
+      <td>{{Date_In}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

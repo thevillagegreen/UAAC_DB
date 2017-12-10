@@ -1,9 +1,9 @@
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Animal Table
-    <a href="./animal/search" class="btn-lg pull-right">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
-    <a href="./animal/delete" class="btn-lg pull-right">Delete  <i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
-    <a href="./animal/new" class="btn-lg pull-right">Insert  <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+    <a href="./animal/search" class="btn-lg pull-right">Search<i class="fa fa-search" aria-hidden="true"></i></a>
+    <a href="./animal/delete" class="btn-lg pull-right">Delete<i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
+    <a href="./animal/new" class="btn-lg pull-right">Insert<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
   </div>
   <!-- Table -->
   <table class="table table-striped">
@@ -17,6 +17,7 @@
     <th>Fostered</th>
     <th>Animal Type</th>
     <th>Org ID</th>
+    <th>Date_In</th>
 
     {{#each animals}}
     <tr>
@@ -30,6 +31,7 @@
       <td>{{Fostered}}</td>
       <td>{{Animal_Type}}</td>
       <td>{{Org_ID}}</td>
+      <td>{{Date_In}}</td>
     </tr>
     {{/each}}
   </table>

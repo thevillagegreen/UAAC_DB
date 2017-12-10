@@ -8,14 +8,20 @@ router.get('/', function(req, res, next) {
   res.render('tables', { title: 'UAAC' });
 });
 
+/***
+Newest animal page
+*/
 router.get('/newest', function(req, res) {
-  knex('NEWEST_ANIMAL').orderBy('Date_In', 'DESC')
+  knex('NEWEST_ANIMAL').orderBy('Date_In', 'DESC').limit('10')
     .select()
     .then(newest => {
       res.render('./tables/newest', {newest: newest});
     })
 });
 
+/***
+Animal routes
+*/
 router.get('/animal', function(req, res) {
   knex('ANIMAL')
     .select()
@@ -25,7 +31,6 @@ router.get('/animal', function(req, res) {
 });
 
 //INSERT
-
 router.get('/animal/new', function(req, res) {
   res.render('./animal/form');
 });
@@ -45,7 +50,6 @@ router.post('/animal/new', function(req, res) {
       Animal_Type: req.body.type,
       Org_ID: req.body.org,
       Date_In: '2017-10-31 00:00:0000'
-
     }).then(a => {
       console.log('post sent');
       console.log(a);
@@ -54,7 +58,6 @@ router.post('/animal/new', function(req, res) {
 });
 
 //DELETE
-
 router.get('/animal/delete', function(req, res) {
   res.render('./animal/delete');
 });
@@ -72,11 +75,9 @@ router.post('/animal/delete', function(req, res) {
 });
 
 //SEARCH
-
 router.get('/animal/search', function(req, res) {
   res.render('./animal/search');
 });
-
 
 router.post('/animal/search', function(req, res) {
   console.log(req.body);
@@ -85,13 +86,17 @@ router.post('/animal/search', function(req, res) {
   .then(a => {
     console.log('post sent');
     console.log(a);
-    res.redirect('/tables/animal/result', {bree});
+    res.redirect('/tables/animal/result', {bree});  // Problem here
     })
 });
+/***
+End Animal routes
+*/
 
 
-
-
+/***
+Employee routes
+*/
 router.get('/employee', function(req, res) {
   knex('EMPLOYEE')
     .select()
@@ -100,6 +105,70 @@ router.get('/employee', function(req, res) {
     })
 });
 
+//INSERT
+router.get('/employee/new', function(req, res) {
+  res.render('./employee/form');
+});
+
+router.post('/employee/new', function(req, res) {
+  console.log(req.body);
+  knex('EMPLOYEE').insert(
+    {
+      Employee_ID: req.body.id,
+    	Lname: req.body.lname,
+    	Fname: req.body.fname,
+    	Mname: req.body.mname,
+    	Address: req.body.address,
+    	Phone_Number: req.body.number,
+    	SSN: req.body.ssn,
+    	Org_ID: req.body.org,
+    }).then(a => {
+      console.log('post sent');
+      console.log(a);
+      res.redirect('/tables/employee');
+    })
+});
+
+//DELETE
+router.get('/employee/delete', function(req, res) {
+  res.render('./employee/delete');
+});
+
+router.post('/employee/delete', function(req, res) {
+  console.log(req.body);
+  knex('EMPLOYEE')
+    .select()
+    .where('Employee_ID', req.body.id)
+    .del().then(a => {
+      console.log('post sent');
+      console.log(a);
+      res.redirect('/tables/employee');
+    })
+});
+
+//SEARCH
+router.get('/employee/search', function(req, res) {
+  res.render('./employee/search');
+});
+
+router.post('/employee/search', function(req, res) {
+  console.log(req.body);
+  knex('EMPLOYEE')
+    .where('FName', req.body.id)
+  .then(a => {
+    console.log('post sent');
+    console.log(a);
+    res.redirect('/tables/employee/result', {bree});  // Problem here
+    })
+});
+/***
+End Employee routes
+*/
+
+
+/***
+Volunteer routes
+*/
 router.get('/volunteer', function(req, res) {
   knex('VOLUNTEER')
     .select()
@@ -108,8 +177,73 @@ router.get('/volunteer', function(req, res) {
     })
 });
 
-router.get('/animal_health', function(req, res) {
+//INSERT
+router.get('/volunteer/new', function(req, res) {
+  res.render('./volunteer/form');
+});
+
+router.post('/volunteer/new', function(req, res) {
+  console.log(req.body);
+  knex('VOLUNTEER').insert(
+    {
+      Volunteer_ID: req.body.id,
+    	Lname: req.body.lname,
+    	Fname: req.body.fname,
+      Phone_Number: req.body.number,
+    	Address: req.body.address,
+    	Emergency_Contact_Lname: req.body.contact_last,
+      Emergency_Contact_Fname: req.body.contact_first,
+      Emergency_Contact_Pnumber: req.body.contact_number,
+    	Org_ID: req.body.org,
+    }).then(a => {
+      console.log('post sent');
+      console.log(a);
+      res.redirect('/tables/volunteer');
+    })
+});
+
+//DELETE
+router.get('/volunteer/delete', function(req, res) {
+  res.render('./volunteer/delete');
+});
+
+router.post('/volunteer/delete', function(req, res) {
+  console.log(req.body);
   knex('VOLUNTEER')
+    .select()
+    .where('Volunteer_ID', req.body.id)
+    .del().then(a => {
+      console.log('post sent');
+      console.log(a);
+      res.redirect('/tables/volunteer');
+    })
+});
+
+//SEARCH
+router.get('/volunteer/search', function(req, res) {
+  res.render('./volunteer/search');
+});
+
+router.post('/volunteer/search', function(req, res) {
+  console.log(req.body);
+  knex('VOLUNTEER')
+    .where('FName', req.body.id)
+  .then(a => {
+    console.log('post sent');
+    console.log(a);
+    res.redirect('/tables/employee/result', {bree});  // Problem here
+    })
+});
+/***
+End Volunteer routes
+*/
+
+
+/***
+Animal_health routes
+*/
+router.get('/animal_health', function(req, res) {
+  knex('ANIMAL')    // check this shit
     .select()
     .then(animals => {
       res.render('./tables/animal_health', {animals: animals});
@@ -122,5 +256,54 @@ router.get('/adopt', function(req, res) {
       res.render('./tables/adopt', {adopt: adopt});
     })
 });
+/***
+End Animal_health routes
+*/
+
+
+/***
+Adoptable animals routes
+*/
+
+//Available animals
+router.get('/available_animal', function(req, res) {
+  knex("ANIMAL")
+    .join("ANIMAL_HEALTH", "ANIMAL.Animal_ID", "=", "ANIMAL_HEALTH.Animal_ID")
+    .orderBy("Animal_Type", "ASC")
+    .select("ANIMAL.Animal_ID", "Animal_Name", "Breed", "Animal_Type", "Spayed_Or_Neutered")
+    .then(available => {
+      res.render('./tables/available_animal', {available: available});
+    })
+});
+
+//Available dogs
+router.get('/available_dog', function(req, res) {
+  knex("ANIMAL")
+    .whereIn("Animal_Type", ["Dog", "dog"])
+    .join("ANIMAL_HEALTH", "ANIMAL.Animal_ID", "=", "ANIMAL_HEALTH.Animal_ID")
+    .select("ANIMAL.Animal_ID", "Animal_Name", "Breed", "Spayed_Or_Neutered")
+    .then(available => {
+      res.render('./tables/available_dog', {available: available});
+    })
+});
+
+//Available cats
+router.get('/available_cat', function(req, res) {
+  knex("ANIMAL")
+    .whereIn("Animal_Type", ["Cat", "cat"])
+    .join("ANIMAL_HEALTH", "ANIMAL.Animal_ID", "=", "ANIMAL_HEALTH.Animal_ID")
+    .select("ANIMAL.Animal_ID", "Animal_Name", "Breed", "Spayed_Or_Neutered")
+    .then(available => {
+      res.render('./tables/available_cat', {available: available});
+    })
+});
+
+
+//INSERT
+router.get('/volunteer/new', function(req, res) {
+  res.render('./volunteer/form');
+});
+
+
 
 module.exports = router;

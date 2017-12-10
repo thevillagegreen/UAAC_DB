@@ -1,0 +1,4 @@
+runtime: nodejs
+env: flex
+beta_settings:
+  cloud_sql_instances: dulcet-equinox-184822:us-central1:uaac-database

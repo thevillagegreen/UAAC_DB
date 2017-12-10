@@ -1,0 +1,38 @@
+<div class="container">
+  <form action="/tables/employee/new" method="POST">
+    <div class="form-group">
+
+      <label for="employee_id">ID</label>
+      <input type="text" name="id" class="form-control" id="employee_id" placeholder="E.G. 1232">
+
+      <label for="employee_lname">Last Name</label>
+      <input type="text" name="lname" class="form-control" id="employee_LName" placeholder="E.G. Smith">
+
+      <label for="employee_fname">First Name</label>
+      <input type="text" name="fname" class="form-control" id="employee_FName" placeholder="E.G. Dan">
+
+      <label for="employee_mname">Middle Name</label>
+      <input type="text" name="mname" class="form-control" id="employee_MName" placeholder="E.G. Danger">
+
+      <label for="employee_address">Address</label>
+      <input type="text" name="address" class="form-control" id="employee_address" placeholder="E.G. 1000 S 1000 E, Salt Lake City, UT">
+
+      <label for="employee_number">Phone Number</label>
+      <input type="text" name="number" class="form-control" id="employee_number" placeholder="E.G. 803-123-4567">
+
+      <label for="employee_ssn">SSN</label>
+      <input type="text" name="ssn" class="form-control" id="employee_ssn" placeholder="E.G. 12-34-5678">
+
+      <div class="form-check form-check-inline">
+        <label for="employee_org">Organization ID</label>
+        <label class="form-check-label" for="employee_adopted">
+          <input class="form-check-input" type="radio" name="org" id="employee_org" value="1"> 1
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+
+    </div>
+
+  </form>
+</div>

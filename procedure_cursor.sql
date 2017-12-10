@@ -23,10 +23,9 @@ CREATE PROCEDURE newest_animal_table ()
 
   DECLARE animal_cursor CURSOR FOR
   SELECT Animal_ID, Animal_Name, Animal_Type, Date_In
-    FROM ANIMAL_VIEW
+    FROM ANIMAL
     WHERE Date_IN IS NOT NULL AND Animal_ID NOT IN
-      (SELECT Animal_ID FROM NEWEST_ANIMAL)
-    LIMIT 10;
+      (SELECT Animal_ID FROM NEWEST_ANIMAL);
 
   DECLARE CONTINUE HANDLER
   FOR NOT FOUND SET v_finished = 1;

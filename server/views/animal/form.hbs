@@ -58,9 +58,24 @@
         </label>
       </div>
 
+      <!-- <div class="form-check form-check-inline">
+        <label for="animal_org">Date Added</label>
+        <label class="form-check-label" for="animal_adopted">
+          <input class="form-check-input" type="radio" name="org" id="date" value="1"> 1
+          <button onclick="myFunction()">Date In</button>
+        </label>
+      </div>
       <button type="submit">Submit</button>
-
-    </div>
+    </div> -->
 
   </form>
 </div>
+
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "date");
+  x.setAttribute("value", "2014-02-09");
+  document.body.appendChild(x);
+}
+</script>

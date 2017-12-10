@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Available Dogs</div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Animal Type</th>
+    <th>Spayed Or Neutered</th>
+
+    {{#each available}}
+    <tr>
+      <td>{{Animal_ID}}</td>
+      <td>{{Animal_Name}}</td>
+      <td>{{Breed}}</td>
+      <td>{{Animal_Type}}</td>
+      <td>{{Spayed_Or_Neutered}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
