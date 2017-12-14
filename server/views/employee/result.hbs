@@ -1,8 +1,7 @@
-
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Employees
-    <!-- <a href="./employee/search" class="btn-lg pull-right">Search<i class="fa fa-search" aria-hidden="true"></i></a> -->
+    <a href="./employee/search" class="btn-lg pull-right">Search<i class="fa fa-search" aria-hidden="true"></i></a>
     <a href="./employee/delete" class="btn-lg pull-right">Delete<i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
     <a href="./employee/new" class="btn-lg pull-right">Add<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
   </div>
@@ -18,7 +17,7 @@
     <th>SSN</th>
     <th>Org_ID</th>
 
-    {{#each employees}}
+    {{#each search}}
     <tr>
       <td>{{Employee_ID}}</td>
       <td>{{Lname}}</td>

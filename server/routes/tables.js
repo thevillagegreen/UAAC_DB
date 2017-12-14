@@ -79,11 +79,19 @@ router.get('/animal/search', function(req, res) {
   res.render('./animal/search');
 });
 
+router.get('/animal/search/result', function(req, res) {
+  knex('ANIMAL')
+    .select()
+    .where('Breed', search)
+    .then(search => {
+      res.render('./tables/animal/result', {search: search});
+    })
+});
+
 router.post('/animal/search', function(req, res) {
   console.log('post sent');
   var search = req.body.breed;
   console.log(search);
-  //res.redirect('/tables/animal/search/result', {search: search});
   knex('ANIMAL')
     .select()
     .where('Breed', search)
@@ -95,14 +103,6 @@ router.post('/animal/search', function(req, res) {
 End Animal routes
 */
 
-router.get('/animal/search/result', function(req, res) {
-  knex('ANIMAL')
-    .select()
-    .where('Breed', search)
-    .then(search => {
-      res.render('./tables/animal/result', {search: search});
-    })
-});
 
 /***
 Employee routes
@@ -156,19 +156,29 @@ router.post('/employee/delete', function(req, res) {
     })
 });
 
-//SEARCH
+//SEARCH DOESN'T DO ANYTHING
 router.get('/employee/search', function(req, res) {
   res.render('./employee/search');
 });
 
-router.post('/employee/search', function(req, res) {
-  console.log(req.body);
+router.get('/employee/search/result', function(req, res) {
   knex('EMPLOYEE')
-    .where('FName', req.body.id)
-  .then(a => {
-    console.log('post sent');
-    console.log(a);
-    res.redirect('/tables/employee/result', {bree});  // Problem here
+    .select()
+    .where('Fname', search)
+    .then(search => {
+      res.render('./tables/employee/result', {search: search});
+    })
+});
+
+router.post('/employee/search', function(req, res) {
+  console.log('post sent');
+  var search = req.body.fname;
+  console.log(search);
+  knex('EMPLOYEE')
+    .select()
+    .where('Fname', search)
+    .then(search => {
+      res.render('./employee/result', {search: search});
     })
 });
 /***
